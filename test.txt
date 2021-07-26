@@ -1,1 +1,3 @@
 test~
+Git Latest source Release is 2.32.0
+url is https://git-scm.com/
