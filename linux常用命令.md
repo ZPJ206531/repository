@@ -36,5 +36,15 @@ Linux上进程的状态有5种：
 
 
 
+## &
+
+- bg [作业id]
+- fg [作业id]
+- jobs -l
+- ctrl Z
+- kill [进程id]
+- nohup 主线程退出后，继续运行子线程
+- setsid 
+
 
 
