@@ -64,13 +64,28 @@ git diff //查看全部修改内容，比较当前文件和暂存区域的差异
 rm filename //从工作目录中移除某文件
 git rm 文件名 //记录移除操作
 rm -f filename // 强制移除某文件
-
-
 ```
+
+|     命令     | 作用                                                         |
+| :----------: | ------------------------------------------------------------ |
+|  git branch  | 创建分支、删除分支、查看分支、重命名分支创建本地跟踪分支并从远程分支拉取代码、建立当前分支与指定远程分支的追踪关系 |
+| git checkout | 切换分支、创建+切换分支、创建本地跟踪分支并从远程分支拉取代码 |
+|  git switch  | 切换分支、创建+切换分支、创建本地跟踪分支并从远程分支拉取代码 |
+
+| 分支操作      | 命令                                                         |
+| ------------- | ------------------------------------------------------------ |
+| 创建分支      | `git branch <name>`创建叫name的分支，但仍然停留在当前分支。  |
+| 删除分支      | git branch -d <name>：参数为-D则为强制删除。<br/>git push origin --delete <name> ：删除远程仓库的叫name的分支，同名的本地分支并不会被删除，所以还需要单独删除本地同名分支<br/>git branch -dr <remote>/<branch-name>：没有删除远程分支，只是删除 git branch -r 列表中的追踪分支。一般只有git push命令可以修改远程仓库。<br/> |
+| 切换分支      | git switch <name>` `git checkout <name>                      |
+| 创建+切换分支 | git switch -c <name>` `git checkout -b <name>` 上方两条命令一个意思：如果分支存在则只切换分支。不存在则创建叫name的分支，然后切换到该分支。相当于两条命令：`git branch <name>`，`git checkout <name> |
+| 查看分支      | `git branch`：查看本地分支，当前分支前面会标一个*号。<br/>`git branch -r`：查看远程分支。<br/>`git branch -a`：查看本地分支和远程分支，远程分支会用红色表示出来（如果你开了颜色支持的话）。<br/>`git branch -vv`：查看本地分支对应的远程分支。 |
+| 重命名分支    | git branch -m oldName newName                                |
+
+
 
 ## Git机制
 
-![lifecycle](C:\Users\user\Desktop\lifecycle.png)
+
 
 ### git忽略文件
 
